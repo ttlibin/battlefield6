@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏攻略 - Battlefield 6 | 武器配装指南</title>
+    <meta name="description" content="Battlefield 6游戏攻略大全，武器配装推荐，地图战术指南，新手教程和高级技巧。">
+    <meta name="keywords" content="Battlefield 6, BF6, 游戏攻略, 武器配装, 地图攻略, 战术指南">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1893638941587898"
+            crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1>BATTLEFIELD 6</h1>
+                <span class="subtitle">战地风云6</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link" data-i18n="nav.home">首页</a></li>
+                <li><a href="servers.html" class="nav-link" data-i18n="nav.servers">服务器</a></li>
+                <li><a href="news.html" class="nav-link" data-i18n="nav.news">资讯</a></li>
+                <li><a href="guides.html" class="nav-link active" data-i18n="nav.guides">攻略</a></li>
+            </ul>
+            <div class="lang-switcher">
+                <select id="langSwitcher" class="lang-select">
+                    <option value="zh-CN" data-i18n="lang.chinese">中文</option>
+                    <option value="en-US" data-i18n="lang.english">English</option>
+                    <option value="de-DE" data-i18n="lang.german">Deutsch</option>
+                    <option value="ja-JP" data-i18n="lang.japanese">日本語</option>
+                    <option value="ko-KR" data-i18n="lang.korean">한국어</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- 攻略分类 -->
+        <section class="guide-categories">
+            <div class="categories-container">
+                <h2 class="page-title" data-i18n="guides.title">游戏攻略</h2>
+                <div class="category-grid">
+                    <div class="category-card" data-category="weapons">
+                        <div class="category-icon">🔫</div>
+                        <h3 data-i18n="guides.weapons">武器配装</h3>
+                        <p data-i18n="guides.weaponsDesc">最佳武器搭配和配件推荐</p>
+                    </div>
+                    <div class="category-card" data-category="maps">
+                        <div class="category-icon">🗺️</div>
+                        <h3 data-i18n="guides.maps">地图攻略</h3>
+                        <p data-i18n="guides.mapsDesc">各地图战术点位和策略</p>
+                    </div>
+                    <div class="category-card" data-category="classes">
+                        <div class="category-icon">👥</div>
+                        <h3 data-i18n="guides.classes">兵种指南</h3>
+                        <p data-i18n="guides.classesDesc">四大兵种玩法和技巧</p>
+                    </div>
+                    <div class="category-card" data-category="vehicles">
+                        <div class="category-icon">🚁</div>
+                        <h3 data-i18n="guides.vehicles">载具操作</h3>
+                        <p data-i18n="guides.vehiclesDesc">坦克飞机载具驾驶技巧</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 广告位1: 攻略分类下方 -->
+        <section class="ad-section">
+            <div class="ad-container">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-1893638941587898"
+                     data-ad-slot="8901234567"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+            </div>
+        </section>
+
+        <!-- 热门攻略 -->
+        <section class="popular-guides">
+            <div class="guides-container">
+                <h3 class="section-title" data-i18n="guides.popular">热门攻略</h3>
+                <div class="guides-grid" id="popularGuides">
+                    <!-- 热门攻略将通过JavaScript动态加载 -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 广告位2: 热门攻略下方 -->
+        <section class="ad-section">
+            <div class="ad-container">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-1893638941587898"
+                     data-ad-slot="9012345678"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+            </div>
+        </section>
+
+        <!-- 武器数据库 -->
+        <section class="weapon-database">
+            <div class="database-container">
+                <h3 class="section-title" data-i18n="guides.weaponDatabase">武器数据库</h3>
+                <div class="weapon-filters">
+                    <button class="weapon-filter active" data-type="all" data-i18n="guides.allWeapons">全部武器</button>
+                    <button class="weapon-filter" data-type="assault" data-i18n="guides.assaultRifles">突击步枪</button>
+                    <button class="weapon-filter" data-type="sniper" data-i18n="guides.sniperRifles">狙击步枪</button>
+                    <button class="weapon-filter" data-type="lmg" data-i18n="guides.lmg">轻机枪</button>
+                    <button class="weapon-filter" data-type="smg" data-i18n="guides.smg">冲锋枪</button>
+                </div>
+                <div class="weapon-grid" id="weaponGrid">
+                    <!-- 武器数据将通过JavaScript动态加载 -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Battlefield6.xyz - <span data-i18n="footer.copyright">非官方粉丝网站</span></p>
+            <p data-i18n="footer.disclaimer">游戏版权归 EA DICE 所有</p>
+        </div>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/guides.js"></script>
+    
+    <!-- AdSense 初始化脚本 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                try {
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    console.log('✅ 攻略页面 AdSense 广告已初始化');
+                } catch (error) {
+                    console.error('❌ 攻略页面 AdSense 初始化失败:', error);
+                }
+            }, 2000);
+        });
+    </script>
+</body>
+
+</html>

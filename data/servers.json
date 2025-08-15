@@ -1,0 +1,20 @@
+{
+  "timestamp": "2025-01-15T12:00:00.000Z",
+  "totalPlayers": 47230,
+  "regions": {
+    "asia": 16530,
+    "europe": 14170,
+    "america": 16530
+  },
+  "status": {
+    "asia": "online",
+    "europe": "online",
+    "america": "online"
+  },
+  "ping": {
+    "asia": 28,
+    "europe": 42,
+    "america": 38
+  },
+  "source": "hybrid-demo"
+}

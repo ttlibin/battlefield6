@@ -1,0 +1,93 @@
+{
+  "zh-CN": [
+    {
+      "title": "Battlefield 6 公测第三轮即将开启",
+      "excerpt": "EA官方宣布将于本周末开启第三轮公测，新增城市作战地图和载具定制系统。",
+      "image": "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=200&fit=crop",
+      "date": "2025-01-15",
+      "source": "EA官方",
+      "category": "游戏更新",
+      "url": "#"
+    },
+    {
+      "title": "战地6武器平衡性调整详解",
+      "excerpt": "开发团队根据玩家反馈对突击步枪和狙击步枪进行了重要的平衡性调整。",
+      "image": "https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=400&h=200&fit=crop",
+      "date": "2025-01-14",
+      "source": "DICE开发团队",
+      "category": "游戏更新",
+      "url": "#"
+    },
+    {
+      "title": "社区热议：最受欢迎的地图排行",
+      "excerpt": "Reddit社区投票显示，Orbital和Manifest成为玩家最喜爱的两张地图。",
+      "image": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=200&fit=crop",
+      "date": "2025-01-13",
+      "source": "r/battlefield",
+      "category": "社区讨论",
+      "url": "#"
+    }
+  ],
+  "en-US": [
+    {
+      "title": "Battlefield 6 Third Beta Round Announced",
+      "excerpt": "EA officially announces the third beta test starting this weekend with new urban combat maps and vehicle customization.",
+      "image": "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=200&fit=crop",
+      "date": "2025-01-15",
+      "source": "EA Official",
+      "category": "Game Updates",
+      "url": "#"
+    },
+    {
+      "title": "BF6 Weapon Balance Changes Explained",
+      "excerpt": "Development team makes important balance adjustments to assault rifles and sniper rifles based on player feedback.",
+      "image": "https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=400&h=200&fit=crop",
+      "date": "2025-01-14",
+      "source": "DICE Development Team",
+      "category": "Game Updates",
+      "url": "#"
+    },
+    {
+      "title": "Community Poll: Most Popular Maps Ranking",
+      "excerpt": "Reddit community voting shows Orbital and Manifest as the most beloved maps among players.",
+      "image": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=200&fit=crop",
+      "date": "2025-01-13",
+      "source": "r/battlefield",
+      "category": "Community Discussion",
+      "url": "#"
+    }
+  ],
+  "de-DE": [
+    {
+      "title": "Battlefield 6 Dritte Beta-Runde angekündigt",
+      "excerpt": "EA kündigt offiziell die dritte Beta-Phase für dieses Wochenende mit neuen Stadtkampf-Karten an.",
+      "image": "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=200&fit=crop",
+      "date": "2025-01-15",
+      "source": "EA Offiziell",
+      "category": "Spiel-Updates",
+      "url": "#"
+    }
+  ],
+  "ja-JP": [
+    {
+      "title": "Battlefield 6 第3回ベータテスト発表",
+      "excerpt": "EA公式が今週末に第3回ベータテストを開始すると発表、新しい都市戦マップが追加されます。",
+      "image": "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=200&fit=crop",
+      "date": "2025-01-15",
+      "source": "EA公式",
+      "category": "ゲーム更新",
+      "url": "#"
+    }
+  ],
+  "ko-KR": [
+    {
+      "title": "Battlefield 6 세 번째 베타 라운드 발표",
+      "excerpt": "EA가 이번 주말에 세 번째 베타 테스트를 시작한다고 공식 발표했습니다.",
+      "image": "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=200&fit=crop",
+      "date": "2025-01-15",
+      "source": "EA 공식",
+      "category": "게임 업데이트",
+      "url": "#"
+    }
+  ]
+}

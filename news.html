@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏资讯 - Battlefield 6 | 最新消息</title>
+    <meta name="description" content="Battlefield 6最新游戏资讯，官方公告，更新日志，攻略指南和社区讨论。">
+    <meta name="keywords" content="Battlefield 6, BF6, 游戏资讯, 官方公告, 更新日志, 攻略">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1893638941587898"
+            crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1>BATTLEFIELD 6</h1>
+                <span class="subtitle">战地风云6</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link" data-i18n="nav.home">首页</a></li>
+                <li><a href="servers.html" class="nav-link" data-i18n="nav.servers">服务器</a></li>
+                <li><a href="news.html" class="nav-link active" data-i18n="nav.news">资讯</a></li>
+                <li><a href="guides.html" class="nav-link" data-i18n="nav.guides">攻略</a></li>
+            </ul>
+            <div class="lang-switcher">
+                <select id="langSwitcher" class="lang-select">
+                    <option value="zh-CN" data-i18n="lang.chinese">中文</option>
+                    <option value="en-US" data-i18n="lang.english">English</option>
+                    <option value="de-DE" data-i18n="lang.german">Deutsch</option>
+                    <option value="ja-JP" data-i18n="lang.japanese">日本語</option>
+                    <option value="ko-KR" data-i18n="lang.korean">한국어</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- 新闻筛选 -->
+        <section class="news-filter">
+            <div class="filter-container">
+                <h2 class="page-title" data-i18n="news.title">最新资讯</h2>
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-category="all" data-i18n="news.all">全部</button>
+                    <button class="filter-tab" data-category="official" data-i18n="news.official">官方公告</button>
+                    <button class="filter-tab" data-category="updates" data-i18n="news.updates">游戏更新</button>
+                    <button class="filter-tab" data-category="guides" data-i18n="news.guides">攻略指南</button>
+                    <button class="filter-tab" data-category="community" data-i18n="news.community">社区讨论</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 广告位1: 新闻筛选下方 -->
+        <section class="ad-section">
+            <div class="ad-container">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-1893638941587898"
+                     data-ad-slot="6789012345"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+            </div>
+        </section>
+
+        <!-- 热门新闻 -->
+        <section class="featured-news">
+            <div class="featured-container">
+                <h3 class="section-title" data-i18n="news.featured">热门资讯</h3>
+                <div class="featured-grid" id="featuredNews">
+                    <!-- 热门新闻将通过JavaScript动态加载 -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 广告位2: 热门新闻下方 -->
+        <section class="ad-section">
+            <div class="ad-container">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-1893638941587898"
+                     data-ad-slot="7890123456"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+            </div>
+        </section>
+
+        <!-- 新闻列表 -->
+        <section class="news-list">
+            <div class="news-container">
+                <div class="news-grid" id="allNews">
+                    <!-- 所有新闻将通过JavaScript动态加载 -->
+                </div>
+                <div class="load-more-container">
+                    <button class="load-more-btn" id="loadMoreBtn" data-i18n="news.loadMore">加载更多</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Battlefield6.xyz - <span data-i18n="footer.copyright">非官方粉丝网站</span></p>
+            <p data-i18n="footer.disclaimer">游戏版权归 EA DICE 所有</p>
+        </div>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/news.js"></script>
+    <script src="js/news-page.js"></script>
+    
+    <!-- AdSense 初始化脚本 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                try {
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    console.log('✅ 新闻页面 AdSense 广告已初始化');
+                } catch (error) {
+                    console.error('❌ 新闻页面 AdSense 初始化失败:', error);
+                }
+            }, 2000);
+        });
+    </script>
+</body>
+
+</html>

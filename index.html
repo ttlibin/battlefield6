@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battlefield 6 - 战地风云6官方倒计时 | 发售时间、服务器状态</title>
+    <meta name="description" content="Battlefield 6战地风云6官方发售倒计时，实时服务器状态监控，最新游戏资讯聚合。2025年10月10日正式发售！">
+    <meta name="keywords" content="Battlefield 6, 战地风云6, BF6, 发售时间, 倒计时, 服务器状态">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1893638941587898"
+            crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1>BATTLEFIELD 6</h1>
+                <span class="subtitle">战地风云6</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active" data-i18n="nav.home">首页</a></li>
+                <li><a href="servers.html" class="nav-link" data-i18n="nav.servers">服务器</a></li>
+                <li><a href="news.html" class="nav-link" data-i18n="nav.news">资讯</a></li>
+                <li><a href="guides.html" class="nav-link" data-i18n="nav.guides">攻略</a></li>
+            </ul>
+            <div class="lang-switcher">
+                <select id="langSwitcher" class="lang-select">
+                    <option value="zh-CN" data-i18n="lang.chinese">中文</option>
+                    <option value="en-US" data-i18n="lang.english">English</option>
+                    <option value="de-DE" data-i18n="lang.german">Deutsch</option>
+                    <option value="ja-JP" data-i18n="lang.japanese">日本語</option>
+                    <option value="ko-KR" data-i18n="lang.korean">한국어</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- 主倒计时区域 -->
+        <section class="countdown-section">
+            <div class="countdown-container">
+                <h2 class="countdown-title" data-i18n="countdown.title">距离正式发售还有</h2>
+                <div class="countdown-display" id="mainCountdown">
+                    <div class="time-unit">
+                        <span class="time-number" id="days">000</span>
+                        <span class="time-label" data-i18n="countdown.days">天</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-number" id="hours">00</span>
+                        <span class="time-label" data-i18n="countdown.hours">时</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-number" id="minutes">00</span>
+                        <span class="time-label" data-i18n="countdown.minutes">分</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-number" id="seconds">00</span>
+                        <span class="time-label" data-i18n="countdown.seconds">秒</span>
+                    </div>
+                </div>
+                <p class="release-date" data-i18n="countdown.release">2025年10月10日全球同步发售</p>
+            </div>
+        </section>
+
+        <!-- 广告位1: 倒计时下方横幅广告 -->
+        <section class="ad-section">
+            <div class="ad-container">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-1893638941587898"
+                     data-ad-slot="1234567890"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+            </div>
+        </section>
+
+        <!-- 服务器状态区域 -->
+        <section class="status-section">
+            <div class="status-container">
+                <h3 class="section-title" data-i18n="servers.title">服务器状态</h3>
+                <div class="server-grid">
+                    <div class="server-card">
+                        <div class="server-status online"></div>
+                        <h4 data-i18n="servers.asia">亚洲服务器</h4>
+                        <p class="player-count"><span data-i18n="servers.online">在线</span>: <span
+                                id="asiaPlayers">--</span></p>
+                        <p class="ping"><span data-i18n="servers.ping">延迟</span>: <span id="asiaPing">--</span>ms</p>
+                    </div>
+                    <div class="server-card">
+                        <div class="server-status online"></div>
+                        <h4 data-i18n="servers.europe">欧洲服务器</h4>
+                        <p class="player-count"><span data-i18n="servers.online">在线</span>: <span
+                                id="europePlayers">--</span></p>
+                        <p class="ping"><span data-i18n="servers.ping">延迟</span>: <span id="europePing">--</span>ms</p>
+                    </div>
+                    <div class="server-card">
+                        <div class="server-status online"></div>
+                        <h4 data-i18n="servers.america">美洲服务器</h4>
+                        <p class="player-count"><span data-i18n="servers.online">在线</span>: <span
+                                id="americaPlayers">--</span></p>
+                        <p class="ping"><span data-i18n="servers.ping">延迟</span>: <span id="americaPing">--</span>ms</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 广告位2: 服务器状态下方横幅广告 -->
+        <section class="ad-section">
+            <div class="ad-container">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-1893638941587898"
+                     data-ad-slot="2345678901"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+            </div>
+        </section>
+
+        <!-- 最新资讯区域 -->
+        <section class="news-section">
+            <div class="news-container">
+                <h3 class="section-title" data-i18n="news.title">最新资讯</h3>
+                <div class="news-grid" id="newsGrid">
+                    <!-- 新闻内容将通过JavaScript动态加载 -->
+                </div>
+                <a href="news.html" class="view-more-btn" data-i18n="news.viewMore">查看更多资讯</a>
+            </div>
+        </section>
+
+        <!-- 广告位3: 新闻区域下方横幅广告 -->
+        <section class="ad-section">
+            <div class="ad-container">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-1893638941587898"
+                     data-ad-slot="3456789012"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Battlefield6.xyz - <span data-i18n="footer.copyright">非官方粉丝网站</span></p>
+            <p data-i18n="footer.disclaimer">游戏版权归 EA DICE 所有</p>
+        </div>
+    </footer>
+
+    <script src="js/api-config.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/servers.js"></script>
+    <script src="js/news.js"></script>
+    <script src="js/news-aggregator.js"></script>
+    
+    <!-- AdSense 初始化脚本 -->
+    <script>
+        // AdSense 广告初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 延迟加载广告，确保页面内容优先加载
+            setTimeout(function() {
+                try {
+                    // 初始化所有广告位
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    
+                    console.log('✅ AdSense 广告已初始化');
+                } catch (error) {
+                    console.error('❌ AdSense 初始化失败:', error);
+                }
+            }, 2000); // 延迟2秒加载广告
+        });
+
+        // 广告加载状态监控
+        function monitorAdLoading() {
+            const adElements = document.querySelectorAll('.adsbygoogle');
+            
+            adElements.forEach((ad, index) => {
+                // 添加加载状态
+                if (!ad.innerHTML.trim()) {
+                    ad.innerHTML = '<div class="ad-loading">广告加载中...</div>';
+                }
+                
+                // 监控广告是否成功加载
+                setTimeout(() => {
+                    if (!ad.innerHTML.includes('google_ads_iframe')) {
+                        console.warn(`广告位 ${index + 1} 可能未成功加载`);
+                    }
+                }, 5000);
+            });
+        }
+
+        // 页面加载完成后监控广告
+        window.addEventListener('load', function() {
+            setTimeout(monitorAdLoading, 3000);
+        });
+    </script>
+</body>
+
+</html>
