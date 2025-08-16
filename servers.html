@@ -13,16 +13,16 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500&display=swap"
         rel="stylesheet">
-    
+
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1893638941587898"
-            crossorigin="anonymous"></script>
-    
+        crossorigin="anonymous"></script>
+
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4YNQTJBQJS"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-4YNQTJBQJS');
     </script>
@@ -75,18 +75,6 @@
             </div>
         </section>
 
-        <!-- 广告位1: 服务器概览下方 -->
-        <section class="ad-section">
-            <div class="ad-container">
-                <ins class="adsbygoogle"
-                     style="display:block"
-                     data-ad-client="ca-pub-1893638941587898"
-                     data-ad-slot="4567890123"
-                     data-ad-format="auto"
-                     data-full-width-responsive="true"></ins>
-            </div>
-        </section>
-
         <!-- 详细服务器列表 -->
         <section class="server-details">
             <div class="server-container">
@@ -94,18 +82,6 @@
                 <div class="server-list" id="serverList">
                     <!-- 服务器详情将通过JavaScript动态加载 -->
                 </div>
-            </div>
-        </section>
-
-        <!-- 广告位2: 服务器列表下方 -->
-        <section class="ad-section">
-            <div class="ad-container">
-                <ins class="adsbygoogle"
-                     style="display:block"
-                     data-ad-client="ca-pub-1893638941587898"
-                     data-ad-slot="5678901234"
-                     data-ad-format="auto"
-                     data-full-width-responsive="true"></ins>
             </div>
         </section>
 
@@ -130,21 +106,7 @@
     <script src="js/i18n.js"></script>
     <script src="js/servers.js"></script>
     <script src="js/server-details.js"></script>
-    
-    <!-- AdSense 初始化脚本 -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            setTimeout(function() {
-                try {
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                    console.log('✅ 服务器页面 AdSense 广告已初始化');
-                } catch (error) {
-                    console.error('❌ 服务器页面 AdSense 初始化失败:', error);
-                }
-            }, 2000);
-        });
-    </script>
+
 </body>
 
 </html>
