@@ -80,18 +80,6 @@
             </div>
         </section>
 
-        <!-- 广告位1: 倒计时下方横幅广告 -->
-        <section class="ad-section">
-            <div class="ad-container">
-                <ins class="adsbygoogle"
-                     style="display:block"
-                     data-ad-client="ca-pub-1893638941587898"
-                     data-ad-slot="1234567890"
-                     data-ad-format="auto"
-                     data-full-width-responsive="true"></ins>
-            </div>
-        </section>
-
         <!-- 服务器状态区域 -->
         <section class="status-section">
             <div class="status-container">
@@ -122,18 +110,6 @@
             </div>
         </section>
 
-        <!-- 广告位2: 服务器状态下方横幅广告 -->
-        <section class="ad-section">
-            <div class="ad-container">
-                <ins class="adsbygoogle"
-                     style="display:block"
-                     data-ad-client="ca-pub-1893638941587898"
-                     data-ad-slot="2345678901"
-                     data-ad-format="auto"
-                     data-full-width-responsive="true"></ins>
-            </div>
-        </section>
-
         <!-- 最新资讯区域 -->
         <section class="news-section">
             <div class="news-container">
@@ -145,17 +121,6 @@
             </div>
         </section>
 
-        <!-- 广告位3: 新闻区域下方横幅广告 -->
-        <section class="ad-section">
-            <div class="ad-container">
-                <ins class="adsbygoogle"
-                     style="display:block"
-                     data-ad-client="ca-pub-1893638941587898"
-                     data-ad-slot="3456789012"
-                     data-ad-format="auto"
-                     data-full-width-responsive="true"></ins>
-            </div>
-        </section>
     </main>
 
     <footer class="footer">
@@ -171,50 +136,7 @@
     <script src="js/servers.js"></script>
     <script src="js/news.js"></script>
     <script src="js/news-aggregator.js"></script>
-    
-    <!-- AdSense 初始化脚本 -->
-    <script>
-        // AdSense 广告初始化
-        document.addEventListener('DOMContentLoaded', function() {
-            // 延迟加载广告，确保页面内容优先加载
-            setTimeout(function() {
-                try {
-                    // 初始化所有广告位
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                    
-                    console.log('✅ AdSense 广告已初始化');
-                } catch (error) {
-                    console.error('❌ AdSense 初始化失败:', error);
-                }
-            }, 2000); // 延迟2秒加载广告
-        });
 
-        // 广告加载状态监控
-        function monitorAdLoading() {
-            const adElements = document.querySelectorAll('.adsbygoogle');
-            
-            adElements.forEach((ad, index) => {
-                // 添加加载状态
-                if (!ad.innerHTML.trim()) {
-                    ad.innerHTML = '<div class="ad-loading">广告加载中...</div>';
-                }
-                
-                // 监控广告是否成功加载
-                setTimeout(() => {
-                    if (!ad.innerHTML.includes('google_ads_iframe')) {
-                        console.warn(`广告位 ${index + 1} 可能未成功加载`);
-                    }
-                }, 5000);
-            });
-        }
-
-        // 页面加载完成后监控广告
-        window.addEventListener('load', function() {
-            setTimeout(monitorAdLoading, 3000);
-        });
-    </script>
 </body>
 
 </html>
