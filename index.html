@@ -13,16 +13,33 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500&display=swap"
         rel="stylesheet">
-    
+
+    <style>
+        /* 游戏控制条样式（轻量内联，避免影响全站样式） */
+        .controls-strip { display: flex; flex-wrap: wrap; gap: 18px 20px; align-items: flex-start; justify-content: center; margin-top: 10px; }
+        .control { display: flex; flex-direction: column; align-items: center; min-width: 84px; }
+        .control .label { margin-top: 6px; font-size: 0.9rem; opacity: 0.9; }
+        .keys-group { display: flex; gap: 6px; align-items: center; }
+        .keycap { display: inline-block; padding: 6px 10px; border: 1px solid rgba(255,255,255,0.25); border-radius: 8px; background: rgba(255,255,255,0.04); box-shadow: inset 0 -1px 0 rgba(255,255,255,0.1); font-weight: 600; letter-spacing: .5px; }
+        .keycap.wide { padding: 6px 26px; }
+        .mouse-icon { width: 42px; height: 42px; color: #ff6a00; }
+        .mouse-icon rect.outline { fill: none; stroke: currentColor; stroke-width: 2; opacity: .9; }
+        .mouse-icon line.split { stroke: currentColor; stroke-width: 2; opacity: .6; }
+        .mouse-icon .btn { fill: currentColor; opacity: .22; }
+        .mouse-icon.aim .btn-right { opacity: .45; }
+        .mouse-icon.shoot .btn-left { opacity: .45; }
+        @media (max-width: 480px) { .control { min-width: 72px; } }
+    </style>
+
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1893638941587898"
-            crossorigin="anonymous"></script>
-    
+        crossorigin="anonymous"></script>
+
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4YNQTJBQJS"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-4YNQTJBQJS');
     </script>
@@ -54,6 +71,110 @@
     </header>
 
     <main class="main">
+        <!-- 游戏试玩区域（新增） -->
+        <section class="game-section">
+            <div class="game-container">
+                <h2 class="section-title"><span data-i18n="game.playOnline">在线试玩</span>：Hazmob FPS</h2>
+                <div style="position:relative;padding-top:56.25%;height:0;border-radius:12px;overflow:hidden;background:#000;box-shadow:0 10px 30px rgba(0,0,0,.35);">
+                    <iframe src="https://www.miniplay.com/embed/hazmob-fps-online-pvp-shooter" title="Hazmob FPS"
+                        style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+                        loading="lazy" allowfullscreen
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <p style="text-align:center;margin-top:12px;">
+                    <span data-i18n="game.fallback">如果上方游戏无法加载，请点击</span>
+                    <a href="https://www.miniplay.com/embed/hazmob-fps-online-pvp-shooter" target="_blank" rel="noopener"><span data-i18n="game.playNow">直接开始游戏</span></a>
+                </p>
+
+                <!-- 游戏操作说明 -->
+                <div class="game-controls" style="margin-top:20px;">
+                    <h3 class="section-title" data-i18n="game.controls.title">操作说明</h3>
+                    <div class="controls-strip">
+                        <!-- WASD Move -->
+                        <div class="control">
+                            <div class="keys-group">
+                                <span class="keycap">W</span>
+                                <span class="keycap">A</span>
+                                <span class="keycap">S</span>
+                                <span class="keycap">D</span>
+                            </div>
+                            <div class="label" data-i18n="game.controls.move">移动</div>
+                        </div>
+
+                        <!-- Aim -->
+                        <div class="control">
+                            <svg class="mouse-icon aim" viewBox="0 0 48 48" aria-hidden="true">
+                                <rect class="outline" x="10" y="6" rx="12" ry="12" width="28" height="36" />
+                                <line class="split" x1="24" y1="6" x2="24" y2="42" />
+                                <rect class="btn btn-right" x="24" y="8" width="12" height="12" rx="3" />
+                            </svg>
+                            <div class="label" data-i18n="game.controls.aim">瞄准</div>
+                        </div>
+
+                        <!-- Shoot -->
+                        <div class="control">
+                            <svg class="mouse-icon shoot" viewBox="0 0 48 48" aria-hidden="true">
+                                <rect class="outline" x="10" y="6" rx="12" ry="12" width="28" height="36" />
+                                <line class="split" x1="24" y1="6" x2="24" y2="42" />
+                                <rect class="btn btn-left" x="12" y="8" width="12" height="12" rx="3" />
+                            </svg>
+                            <div class="label" data-i18n="game.controls.shoot">射击</div>
+                        </div>
+
+                        <!-- Weapons 1-4 -->
+                        <div class="control">
+                            <div class="keys-group">
+                                <span class="keycap">1</span>
+                                <span class="keycap">2</span>
+                                <span class="keycap">3</span>
+                                <span class="keycap">4</span>
+                            </div>
+                            <div class="label" data-i18n="game.controls.weapons">武器</div>
+                        </div>
+
+                        <!-- Skills 5-6 -->
+                        <div class="control">
+                            <div class="keys-group">
+                                <span class="keycap">5</span>
+                                <span class="keycap">6</span>
+                            </div>
+                            <div class="label" data-i18n="game.controls.skills">技能</div>
+                        </div>
+
+                        <!-- Grab G -->
+                        <div class="control">
+                            <span class="keycap">G</span>
+                            <div class="label" data-i18n="game.controls.pickup">拾取</div>
+                        </div>
+
+                        <!-- Crouch C -->
+                        <div class="control">
+                            <span class="keycap">C</span>
+                            <div class="label" data-i18n="game.controls.crouch">蹲下</div>
+                        </div>
+
+                        <!-- Jump Space -->
+                        <div class="control">
+                            <span class="keycap wide">Space</span>
+                            <div class="label" data-i18n="game.controls.jump">跳跃</div>
+                        </div>
+
+                        <!-- Run Shift -->
+                        <div class="control">
+                            <span class="keycap wide">Shift</span>
+                            <div class="label" data-i18n="game.controls.run">奔跑</div>
+                        </div>
+
+                        <!-- Pause P -->
+                        <div class="control">
+                            <span class="keycap">P</span>
+                            <div class="label" data-i18n="game.controls.pause">暂停/设置</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- 主倒计时区域 -->
         <section class="countdown-section">
             <div class="countdown-container">
@@ -78,13 +199,16 @@
                 </div>
                 <p class="release-date" data-i18n="countdown.release">2025年10月10日全球同步发售</p>
                 <div class="official-links">
-                    <a href="https://www.ea.com/games/battlefield" target="_blank" rel="noopener noreferrer" class="official-link">
+                    <a href="https://www.ea.com/games/battlefield" target="_blank" rel="noopener noreferrer"
+                        class="official-link">
                         EA官方
                     </a>
-                    <a href="https://store.steampowered.com/app/2807960/" target="_blank" rel="noopener noreferrer" class="official-link">
+                    <a href="https://store.steampowered.com/app/2807960/" target="_blank" rel="noopener noreferrer"
+                        class="official-link">
                         Steam商店
                     </a>
-                    <a href="https://www.epicgames.com/store/" target="_blank" rel="noopener noreferrer" class="official-link">
+                    <a href="https://www.epicgames.com/store/" target="_blank" rel="noopener noreferrer"
+                        class="official-link">
                         Epic商店
                     </a>
                 </div>
