@@ -33,6 +33,22 @@ class I18nManager {
                 'countdown.release': '2025年10月10日全球同步发售',
                 'countdown.released': '🎉 游戏已正式发售！🎉',
                 'countdown.buy': '立即购买',
+
+                // 游戏区
+                'game.playOnline': '在线试玩',
+                'game.fallback': '如果上方游戏无法加载，请点击',
+                'game.playNow': '直接开始游戏',
+                'game.controls.title': '操作说明',
+                'game.controls.move': '移动',
+                'game.controls.aim': '瞄准',
+                'game.controls.shoot': '射击',
+                'game.controls.weapons': '武器',
+                'game.controls.skills': '技能',
+                'game.controls.pickup': '拾取',
+                'game.controls.crouch': '蹲下',
+                'game.controls.jump': '跳跃',
+                'game.controls.run': '奔跑',
+                'game.controls.pause': '暂停/设置',
                 
                 // 服务器状态
                 'servers.title': '服务器状态',
@@ -74,6 +90,22 @@ class I18nManager {
                 'countdown.release': 'Global Release: October 10, 2025',
                 'countdown.released': '🎉 Game Now Available! 🎉',
                 'countdown.buy': 'Buy Now',
+
+                // Game
+                'game.playOnline': 'Play Online',
+                'game.fallback': 'If the game above fails to load, click',
+                'game.playNow': 'Play Now',
+                'game.controls.title': 'Controls',
+                'game.controls.move': 'Move',
+                'game.controls.aim': 'Aim',
+                'game.controls.shoot': 'Shoot',
+                'game.controls.weapons': 'Weapons',
+                'game.controls.skills': 'Skills',
+                'game.controls.pickup': 'Pick Up',
+                'game.controls.crouch': 'Crouch',
+                'game.controls.jump': 'Jump',
+                'game.controls.run': 'Run',
+                'game.controls.pause': 'Pause/Settings',
                 
                 // Server Status
                 'servers.title': 'Server Status',
@@ -115,6 +147,22 @@ class I18nManager {
                 'countdown.release': 'Weltweite Veröffentlichung: 10. Oktober 2025',
                 'countdown.released': '🎉 Spiel jetzt verfügbar! 🎉',
                 'countdown.buy': 'Jetzt kaufen',
+
+                // Spiel
+                'game.playOnline': 'Online spielen',
+                'game.fallback': 'Wenn das Spiel oben nicht lädt, klicken Sie auf',
+                'game.playNow': 'Jetzt spielen',
+                'game.controls.title': 'Steuerung',
+                'game.controls.move': 'Bewegen',
+                'game.controls.aim': 'Zielen',
+                'game.controls.shoot': 'Schießen',
+                'game.controls.weapons': 'Waffen',
+                'game.controls.skills': 'Fähigkeiten',
+                'game.controls.pickup': 'Aufheben',
+                'game.controls.crouch': 'Ducken',
+                'game.controls.jump': 'Springen',
+                'game.controls.run': 'Laufen',
+                'game.controls.pause': 'Pause/Einstellungen',
                 
                 // Server Status
                 'servers.title': 'Server-Status',
@@ -156,6 +204,22 @@ class I18nManager {
                 'countdown.release': '2025年10月10日 世界同時発売',
                 'countdown.released': '🎉 ゲーム発売開始！🎉',
                 'countdown.buy': '今すぐ購入',
+
+                // ゲーム
+                'game.playOnline': 'オンラインでプレイ',
+                'game.fallback': '上のゲームが読み込めない場合はクリック',
+                'game.playNow': '今すぐプレイ',
+                'game.controls.title': '操作方法',
+                'game.controls.move': '移動',
+                'game.controls.aim': '照準',
+                'game.controls.shoot': '射撃',
+                'game.controls.weapons': '武器',
+                'game.controls.skills': 'スキル',
+                'game.controls.pickup': '取得',
+                'game.controls.crouch': 'しゃがむ',
+                'game.controls.jump': 'ジャンプ',
+                'game.controls.run': '走る',
+                'game.controls.pause': '一時停止/設定',
                 
                 // Server Status
                 'servers.title': 'サーバー状況',
@@ -197,6 +261,22 @@ class I18nManager {
                 'countdown.release': '2025년 10월 10일 전 세계 동시 출시',
                 'countdown.released': '🎉 게임 출시! 🎉',
                 'countdown.buy': '지금 구매',
+
+                // 게임
+                'game.playOnline': '온라인 플레이',
+                'game.fallback': '위의 게임이 로드되지 않으면 클릭',
+                'game.playNow': '지금 플레이',
+                'game.controls.title': '조작법',
+                'game.controls.move': '이동',
+                'game.controls.aim': '조준',
+                'game.controls.shoot': '사격',
+                'game.controls.weapons': '무기',
+                'game.controls.skills': '스킬',
+                'game.controls.pickup': '줍기',
+                'game.controls.crouch': '앉기',
+                'game.controls.jump': '점프',
+                'game.controls.run': '달리기',
+                'game.controls.pause': '일시정지/설정',
                 
                 // Server Status
                 'servers.title': '서버 상태',
