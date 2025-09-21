@@ -5,7 +5,7 @@ class APIConfig {
         this.config = {
             // Steam API配置
             steam: {
-                apiKey: 'YOUR_STEAM_API_KEY', // 需要替换为真实API Key
+                apiKey: 'YOUR_REAL_STEAM_API_KEY', // 替换为你的真实Steam API Key
                 appId: '2807960',
                 enabled: true
             },

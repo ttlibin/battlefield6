@@ -16,20 +16,190 @@
         rel="stylesheet">
 
     <style>
-        /* 游戏控制条样式（轻量内联，避免影响全站样式） */
-        .controls-strip { display: flex; flex-wrap: wrap; gap: 18px 20px; align-items: flex-start; justify-content: center; margin-top: 10px; }
-        .control { display: flex; flex-direction: column; align-items: center; min-width: 84px; }
-        .control .label { margin-top: 6px; font-size: 0.9rem; opacity: 0.9; }
-        .keys-group { display: flex; gap: 6px; align-items: center; }
-        .keycap { display: inline-block; padding: 6px 10px; border: 1px solid rgba(255,255,255,0.25); border-radius: 8px; background: rgba(255,255,255,0.04); box-shadow: inset 0 -1px 0 rgba(255,255,255,0.1); font-weight: 600; letter-spacing: .5px; }
-        .keycap.wide { padding: 6px 26px; }
-        .mouse-icon { width: 42px; height: 42px; color: #ff6a00; }
-        .mouse-icon rect.outline { fill: none; stroke: currentColor; stroke-width: 2; opacity: .9; }
-        .mouse-icon line.split { stroke: currentColor; stroke-width: 2; opacity: .6; }
-        .mouse-icon .btn { fill: currentColor; opacity: .22; }
-        .mouse-icon.aim .btn-right { opacity: .45; }
-        .mouse-icon.shoot .btn-left { opacity: .45; }
-        @media (max-width: 480px) { .control { min-width: 72px; } }
+        /* 视频区域样式 */
+        .hero-layout {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-top: 30px;
+        }
+        
+        .game-title-section {
+            flex: 1;
+            text-align: left;
+            min-width: 300px;
+        }
+        
+        .game-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: #ff6a00;
+            margin: 0;
+            text-shadow: 0 0 20px rgba(255, 106, 0, 0.5);
+            letter-spacing: 2px;
+        }
+        
+        .game-tagline {
+            font-size: 1.2rem;
+            color: #e0e0e0;
+            line-height: 1.5;
+            margin: 20px 0 20px 0;
+            font-weight: 500;
+        }
+        
+        .game-description {
+            font-size: 1rem;
+            color: #c0c0c0;
+            line-height: 1.6;
+            margin: 0;
+            font-weight: 400;
+            opacity: 0.9;
+        }
+        
+        .video-wrapper {
+            flex: 1.5;
+            min-width: 400px;
+        }
+        
+        .video-container-inner {
+            position: relative;
+            padding-top: 56.25%;
+            height: 0;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #000;
+            box-shadow: 0 10px 30px rgba(0,0,0,.35);
+        }
+        
+        .video-container-inner iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+        
+        /* 响应式设计 */
+        @media (max-width: 1024px) {
+            .hero-layout {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .game-title-section {
+                text-align: center;
+                min-width: auto;
+            }
+            
+            .game-title {
+                font-size: 3rem;
+            }
+            
+            .video-wrapper {
+                min-width: auto;
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .game-title {
+                font-size: 2.5rem;
+            }
+            
+            .game-tagline {
+                font-size: 1.1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .game-title {
+                font-size: 2rem;
+            }
+            
+            .game-tagline {
+                font-size: 1rem;
+            }
+        }
+        
+        /* 更多视频区域样式 */
+        .more-videos-section {
+            padding: 60px 0;
+            background: linear-gradient(135deg, rgba(255, 106, 0, 0.05) 0%, rgba(0, 0, 0, 0.8) 100%);
+        }
+        
+        .more-videos-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .video-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(255, 106, 0, 0.2);
+        }
+        
+        .video-thumbnail {
+            position: relative;
+            padding-top: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+        
+        .video-thumbnail iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+        .video-title {
+            padding: 20px;
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #ffffff;
+            text-align: center;
+            background: rgba(255, 106, 0, 0.1);
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .videos-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .more-videos-section {
+                padding: 40px 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .video-title {
+                font-size: 1.1rem;
+                padding: 15px;
+            }
+        }
     </style>
 
     <!-- Google AdSense -->
@@ -51,7 +221,6 @@
         <nav class="nav">
             <div class="nav-brand">
                 <h1>BATTLEFIELD 6</h1>
-                <span class="subtitle">战地风云6</span>
             </div>
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link active" data-i18n="nav.home">首页</a></li>
@@ -72,104 +241,26 @@
     </header>
 
     <main class="main">
-        <!-- 游戏试玩区域（新增） -->
-        <section class="game-section">
-            <div class="game-container">
-                <h2 class="section-title"><span data-i18n="game.playOnline">在线试玩</span>：Hazmob FPS</h2>
-                <div style="position:relative;padding-top:56.25%;height:0;border-radius:12px;overflow:hidden;background:#000;box-shadow:0 10px 30px rgba(0,0,0,.35);">
-                    <iframe src="https://www.miniplay.com/embed/hazmob-fps-online-pvp-shooter" title="Hazmob FPS"
-                        style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
-                        loading="lazy" allowfullscreen
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-                <p style="text-align:center;margin-top:12px;">
-                    <span data-i18n="game.fallback">如果上方游戏无法加载，请点击</span>
-                    <a href="https://www.miniplay.com/embed/hazmob-fps-online-pvp-shooter" target="_blank" rel="noopener"><span data-i18n="game.playNow">直接开始游戏</span></a>
-                </p>
-
-                <!-- 游戏操作说明 -->
-                <div class="game-controls" style="margin-top:20px;">
-                    <h3 class="section-title" data-i18n="game.controls.title">操作说明</h3>
-                    <div class="controls-strip">
-                        <!-- WASD Move -->
-                        <div class="control">
-                            <div class="keys-group">
-                                <span class="keycap">W</span>
-                                <span class="keycap">A</span>
-                                <span class="keycap">S</span>
-                                <span class="keycap">D</span>
-                            </div>
-                            <div class="label" data-i18n="game.controls.move">移动</div>
+        <!-- 官方预告片区域 -->
+        <section class="video-section">
+            <div class="video-container">
+                <!-- 游戏标题和视频的横向布局 -->
+                <div class="hero-layout">
+                    <!-- 左侧游戏标题区域 -->
+                    <div class="game-title-section">
+                        <h1 class="game-title" data-i18n="video.gameTitle">BATTLEFIELD 6</h1>
+                        <p class="game-tagline" data-i18n="video.gameTagline">次世代全面战争体验，128人大规模战场</p>
+                        <p class="game-description" data-i18n="video.shortDescription">见证全球领先的私人军事公司"和平军团"开辟的恶性破坏之路。子弹上膛，获得终极全面战争体验。投入高强度步兵作战，在近距离空战中划破天空。</p>
                         </div>
 
-                        <!-- Aim -->
-                        <div class="control">
-                            <svg class="mouse-icon aim" viewBox="0 0 48 48" aria-hidden="true">
-                                <rect class="outline" x="10" y="6" rx="12" ry="12" width="28" height="36" />
-                                <line class="split" x1="24" y1="6" x2="24" y2="42" />
-                                <rect class="btn btn-right" x="24" y="8" width="12" height="12" rx="3" />
-                            </svg>
-                            <div class="label" data-i18n="game.controls.aim">瞄准</div>
-                        </div>
-
-                        <!-- Shoot -->
-                        <div class="control">
-                            <svg class="mouse-icon shoot" viewBox="0 0 48 48" aria-hidden="true">
-                                <rect class="outline" x="10" y="6" rx="12" ry="12" width="28" height="36" />
-                                <line class="split" x1="24" y1="6" x2="24" y2="42" />
-                                <rect class="btn btn-left" x="12" y="8" width="12" height="12" rx="3" />
-                            </svg>
-                            <div class="label" data-i18n="game.controls.shoot">射击</div>
-                        </div>
-
-                        <!-- Weapons 1-4 -->
-                        <div class="control">
-                            <div class="keys-group">
-                                <span class="keycap">1</span>
-                                <span class="keycap">2</span>
-                                <span class="keycap">3</span>
-                                <span class="keycap">4</span>
-                            </div>
-                            <div class="label" data-i18n="game.controls.weapons">武器</div>
-                        </div>
-
-                        <!-- Skills 5-6 -->
-                        <div class="control">
-                            <div class="keys-group">
-                                <span class="keycap">5</span>
-                                <span class="keycap">6</span>
-                            </div>
-                            <div class="label" data-i18n="game.controls.skills">技能</div>
-                        </div>
-
-                        <!-- Grab G -->
-                        <div class="control">
-                            <span class="keycap">G</span>
-                            <div class="label" data-i18n="game.controls.pickup">拾取</div>
-                        </div>
-
-                        <!-- Crouch C -->
-                        <div class="control">
-                            <span class="keycap">C</span>
-                            <div class="label" data-i18n="game.controls.crouch">蹲下</div>
-                        </div>
-
-                        <!-- Jump Space -->
-                        <div class="control">
-                            <span class="keycap wide">Space</span>
-                            <div class="label" data-i18n="game.controls.jump">跳跃</div>
-                        </div>
-
-                        <!-- Run Shift -->
-                        <div class="control">
-                            <span class="keycap wide">Shift</span>
-                            <div class="label" data-i18n="game.controls.run">奔跑</div>
-                        </div>
-
-                        <!-- Pause P -->
-                        <div class="control">
-                            <span class="keycap">P</span>
-                            <div class="label" data-i18n="game.controls.pause">暂停/设置</div>
+                    <!-- 右侧视频区域 -->
+                    <div class="video-wrapper">
+                        <div class="video-container-inner">
+                            <iframe id="battlefieldVideo" width="853" height="480" src="https://www.youtube.com/embed/pgNCgJG0vnY?enablejsapi=1&origin=https://battlefield6.xyz&rel=0&modestbranding=1&loop=1&playlist=pgNCgJG0vnY" 
+                                title="《战地风云 6》官方揭晓预告片" frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                                loading="lazy"></iframe>
                         </div>
                     </div>
                 </div>
@@ -271,6 +362,36 @@
             </div>
         </section>
 
+        <!-- 更多视频区域 -->
+        <section class="more-videos-section">
+            <div class="more-videos-container">
+                <h3 class="section-title" data-i18n="video.moreVideos">更多视频</h3>
+                <div class="videos-grid">
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <iframe width="853" height="480" src="https://www.youtube.com/embed/dW00mXmP0bQ?enablejsapi=1&origin=https://battlefield6.xyz&rel=0&modestbranding=1&loop=1&playlist=dW00mXmP0bQ" 
+                                title="Battlefield 6 Combat, Classes & Destruction" frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                                loading="lazy"></iframe>
+                        </div>
+                        <h4 class="video-title" data-i18n="video.combatClasses">战斗系统与职业</h4>
+                    </div>
+                    
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <iframe width="853" height="480" src="https://www.youtube.com/embed/wFGEMfyAQtI?enablejsapi=1&origin=https://battlefield6.xyz&rel=0&modestbranding=1&loop=1&playlist=wFGEMfyAQtI" 
+                                title="Battlefield 6 Official Multiplayer Gameplay Trailer" frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                                loading="lazy"></iframe>
+                        </div>
+                        <h4 class="video-title" data-i18n="video.multiplayer">多人对战</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- 主倒计时区域 -->
         <section class="countdown-section">
             <div class="countdown-container">
@@ -367,6 +488,84 @@
     <script src="js/servers.js"></script>
     <script src="js/news.js"></script>
     <script src="js/news-aggregator.js"></script>
+    
+    <!-- YouTube API -->
+    <script>
+        // YouTube API 初始化
+        let player;
+        let isPlayerReady = false;
+        
+        function onYouTubeIframeAPIReady() {
+            console.log('YouTube API is ready');
+            try {
+                player = new YT.Player('battlefieldVideo', {
+                    events: {
+                        'onStateChange': onPlayerStateChange,
+                        'onReady': onPlayerReady,
+                        'onError': onPlayerError
+                    }
+                });
+            } catch (error) {
+                console.error('Error creating YouTube player:', error);
+            }
+        }
+        
+        function onPlayerReady(event) {
+            console.log('YouTube player is ready');
+            isPlayerReady = true;
+        }
+        
+        function onPlayerError(event) {
+            console.error('YouTube player error:', event.data);
+        }
+        
+        function onPlayerStateChange(event) {
+            console.log('Player state changed:', event.data);
+            
+            // 当视频播放结束时，自动重新播放
+            if (event.data === YT.PlayerState.ENDED) {
+                console.log('Video ended, auto-replaying');
+                setTimeout(() => {
+                    if (isPlayerReady && player) {
+                        try {
+                            // 重新播放视频
+                            player.seekTo(0); // 跳转到开始位置
+                            player.playVideo(); // 开始播放
+                            console.log('Video restarted');
+                        } catch (error) {
+                            console.error('Error restarting video:', error);
+                        }
+                    } else {
+                        console.error('Player not ready for restart');
+                    }
+                }, 1000); // 延迟1秒后重新播放
+            }
+        }
+        
+        // 确保YouTube API加载完成后再初始化
+        function initializeYouTubeAPI() {
+            if (typeof YT !== 'undefined' && YT.Player) {
+                onYouTubeIframeAPIReady();
+            } else {
+                console.log('YouTube API not ready, retrying...');
+                setTimeout(initializeYouTubeAPI, 100);
+            }
+        }
+        
+        // 加载YouTube API
+        const tag = document.createElement('script');
+        tag.src = 'https://www.youtube.com/iframe_api';
+        tag.onload = function() {
+            console.log('YouTube API script loaded');
+            // 等待API完全初始化
+            setTimeout(initializeYouTubeAPI, 100);
+        };
+        tag.onerror = function() {
+            console.error('Failed to load YouTube API');
+        };
+        const firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    </script>
 
 </body>
 
