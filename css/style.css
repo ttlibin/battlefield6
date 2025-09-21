@@ -42,13 +42,15 @@ body {
     align-items: center;
     padding: 1rem 2rem;
     gap: 2rem;
+    min-height: 60px;
 }
 
 .nav-brand {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 20px;
     flex-wrap: nowrap;
+    min-width: 0;
 }
 
 .nav-logo {
@@ -57,8 +59,7 @@ body {
     filter: drop-shadow(0 0 8px var(--glow-color));
     transition: transform 0.3s ease;
     flex-shrink: 0;
-    align-self: center;
-    margin-top: 2px;
+    display: block;
 }
 
 .nav-logo:hover {
@@ -73,8 +74,8 @@ body {
     text-shadow: 0 0 10px var(--glow-color);
     margin: 0;
     line-height: 1;
-    display: flex;
-    align-items: center;
+    flex-shrink: 0;
+    white-space: nowrap;
 }
 
 .nav-brand .subtitle {
@@ -83,6 +84,8 @@ body {
     display: block;
     margin-top: -5px;
     line-height: 1;
+    order: 3;
+    flex-shrink: 0;
 }
 
 .nav-menu {
@@ -1315,8 +1318,9 @@ oogle AdSense 广告位样式 */
 .news-section + .ad-section {
     margin-top: 2rem;
     margin-bottom: 2rem;
-}/
-* 官方链接样式 */
+}
+
+/* 官方链接样式 */
 .official-links {
     display: flex;
     justify-content: center;
