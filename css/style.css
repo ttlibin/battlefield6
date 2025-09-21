@@ -48,6 +48,7 @@ body {
     display: flex;
     align-items: center;
     gap: 12px;
+    flex-wrap: nowrap;
 }
 
 .nav-logo {
@@ -55,6 +56,9 @@ body {
     height: 32px;
     filter: drop-shadow(0 0 8px var(--glow-color));
     transition: transform 0.3s ease;
+    flex-shrink: 0;
+    align-self: center;
+    margin-top: 2px;
 }
 
 .nav-logo:hover {
@@ -67,6 +71,10 @@ body {
     font-weight: 900;
     color: var(--accent-orange);
     text-shadow: 0 0 10px var(--glow-color);
+    margin: 0;
+    line-height: 1;
+    display: flex;
+    align-items: center;
 }
 
 .nav-brand .subtitle {
@@ -74,6 +82,7 @@ body {
     color: var(--text-gray);
     display: block;
     margin-top: -5px;
+    line-height: 1;
 }
 
 .nav-menu {
