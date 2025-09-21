@@ -1,0 +1,23 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="minimalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6a00;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff8c00;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="32" height="32" fill="#1a1a1a"/>
+  
+  <!-- 数字 6 -->
+  <text x="16" y="24" 
+        font-family="Arial, sans-serif" 
+        font-size="24" 
+        font-weight="900" 
+        text-anchor="middle" 
+        fill="url(#minimalGradient)">6</text>
+  
+  <!-- 装饰线条 -->
+  <line x1="4" y1="8" x2="28" y2="8" stroke="url(#minimalGradient)" stroke-width="2"/>
+  <line x1="4" y1="12" x2="28" y2="12" stroke="url(#minimalGradient)" stroke-width="1"/>
+</svg>

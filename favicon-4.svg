@@ -1,0 +1,30 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="hexGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6a00;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff8c00;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 六边形背景 -->
+  <polygon points="16,2 28,8 28,24 16,30 4,24 4,8" 
+           fill="url(#hexGradient)" 
+           stroke="#000" 
+           stroke-width="1"/>
+  
+  <!-- BF 文字 -->
+  <text x="16" y="18" 
+        font-family="Arial, sans-serif" 
+        font-size="8" 
+        font-weight="bold" 
+        text-anchor="middle" 
+        fill="#000">BF</text>
+  
+  <!-- 数字 6 -->
+  <text x="16" y="26" 
+        font-family="Arial, sans-serif" 
+        font-size="6" 
+        font-weight="bold" 
+        text-anchor="middle" 
+        fill="#000">6</text>
+</svg>

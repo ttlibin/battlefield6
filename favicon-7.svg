@@ -1,0 +1,41 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="techGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6a00;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ff8c00;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffaa00;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="32" height="32" fill="#1a1a1a"/>
+  
+  <!-- 六边形主体 -->
+  <polygon points="16,2 28,8 28,24 16,30 4,24 4,8" 
+           fill="url(#techGradient)" 
+           stroke="#ffaa00" 
+           stroke-width="1"/>
+  
+  <!-- 内部六边形 -->
+  <polygon points="16,6 24,10 24,22 16,26 8,22 8,10" 
+           fill="none" 
+           stroke="#ffaa00" 
+           stroke-width="1"/>
+  
+  <!-- 中心点 -->
+  <circle cx="16" cy="16" r="3" fill="#ffaa00"/>
+  
+  <!-- 数字 6 -->
+  <text x="16" y="20" 
+        font-family="Arial, sans-serif" 
+        font-size="10" 
+        font-weight="bold" 
+        text-anchor="middle" 
+        fill="#000">6</text>
+  
+  <!-- 科技线条 -->
+  <line x1="2" y1="16" x2="6" y2="16" stroke="#ffaa00" stroke-width="1"/>
+  <line x1="26" y1="16" x2="30" y2="16" stroke="#ffaa00" stroke-width="1"/>
+  <line x1="16" y1="2" x2="16" y2="6" stroke="#ffaa00" stroke-width="1"/>
+  <line x1="16" y1="26" x2="16" y2="30" stroke="#ffaa00" stroke-width="1"/>
+</svg>

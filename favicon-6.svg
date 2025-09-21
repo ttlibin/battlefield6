@@ -1,0 +1,40 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="badgeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6a00;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff8c00;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 徽章外圈 -->
+  <circle cx="16" cy="16" r="14" 
+          fill="url(#badgeGradient)" 
+          stroke="#000" 
+          stroke-width="2"/>
+  
+  <!-- 内圈装饰 -->
+  <circle cx="16" cy="16" r="10" 
+          fill="none" 
+          stroke="#000" 
+          stroke-width="1"/>
+  
+  <!-- 星形装饰 -->
+  <polygon points="16,4 18,10 24,10 19,14 21,20 16,16 11,20 13,14 8,10 14,10" 
+           fill="#000"/>
+  
+  <!-- BF 文字 -->
+  <text x="16" y="18" 
+        font-family="Arial, sans-serif" 
+        font-size="6" 
+        font-weight="bold" 
+        text-anchor="middle" 
+        fill="#000">BF</text>
+  
+  <!-- 数字 6 -->
+  <text x="16" y="25" 
+        font-family="Arial, sans-serif" 
+        font-size="8" 
+        font-weight="bold" 
+        text-anchor="middle" 
+        fill="#000">6</text>
+</svg>
